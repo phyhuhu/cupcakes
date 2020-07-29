@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1 class="list-group-item active">
+    All Cupcakes
+</h1>
+
+<div class="row" id="cupcakes-list">
+    <!-- {% for cupcake in cupcakes %}
+    <div class="col-sm-3">
+        <div class="card" style="width: 18rem;">
+            <img src="{{cupcake.image}}" class="card-img-top" alt="no photo">
+            <div class="card-body">
+                <p class="card-text">
+                    <span>{{cupcake.flavor}}</span> 
+                </p>
+            </div>
+        </div>
+    </div>
+    {% endfor %} -->
+</div>
+
+<hr>
+
+<h2>Add a Cupcake</h2>
+
+<form id="new-cupcake-form">
+    <div class="input-group input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-lg">Flavor:</span>
+        </div>
+        <input name="flavor" id="form-flavor" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+    </div>
+
+    <div class="input-group input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-lg">Size:</span>
+        </div>
+        <input name="size" id="form-size" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+    </div>
+
+    <div class="input-group input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-lg">Rating:</span>
+        </div>
+        <input type="number" name="rating" id="form-rating" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+    </div>
+
+    <div class="input-group input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-lg">Image:</span>
+        </div>
+        <input name="image" id="form-image" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+    </div>
+  
+    <div class="form-group row center">
+        <div class="col-sm">
+            <button type="submit" class="btn btn-primary">Add</button>
+        </div>
+    </div>
+  </form>
+
+<script src="https://unpkg.com/jquery"></script>
+<script src="https://unpkg.com/axios/dist/axios.js"></script>
+<script src="/static/cupcake.js"></script>
+{% endblock %}
